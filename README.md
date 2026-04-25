@@ -39,7 +39,8 @@ where $\zeta = ||y_i - y_j||_2$ is the distance, $f_a$ is the attraction shape, 
 <p align="center">
   <img src="media/Fig_1_github.png" alt="Attraction and repulsion coefficeint" width="800">
 </p>
-
+The value of $f_a$ and $f_r$ guides how the distances contract and expand.
+ 
 For UMAP, these shapes are
 
 $$
@@ -53,6 +54,11 @@ $$
 f_r^U(\zeta) =
 \frac{2b}{\zeta^{2b}(1+a\zeta^{2b})}.
 $$
+
+<p align="center">
+  <img src="media/Fig_1_Github_2.png" alt="Attraction and repulsion shapes of different algorithms" width="800">
+</p>
+(Left) Attraction, and (Right) repulsion shapes of different algorithms. $-1 < \lambda f_a < 0$ indicates contractions during attractive updates. $-0.5 < \lambda f_a < 0$ causes contractions without flips, whereas $\lambda f_a < -0.5$ causes flips.
 
 The paper shows that:
 
