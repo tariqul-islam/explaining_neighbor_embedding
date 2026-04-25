@@ -33,7 +33,7 @@ $$
 y_i^{t+1} = y_i^t + \lambda f_r(\zeta^t)(y_i^t - y_j^t),
 $$
 
-where $(\zeta = ||y_i - y_j||_2)$, $f_a$ is the attraction shape, and $(f_r)$ is the repulsion shape.
+where $\zeta = ||y_i - y_j||_2$ is the distance, $f_a$ is the attraction shape, and $f_r$ is the repulsion shape.
 
 
 <p align="center">
