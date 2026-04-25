@@ -1,6 +1,6 @@
 # The Shape of Attraction in UMAP: Exploring the Embedding Forces in Dimensionality Reduction
 
-Code for the TMLR paper:
+Code for the [TMLR](https://openreview.net/forum?id=fdPNhqav5G) paper:
 
 **The Shape of Attraction in UMAP: Exploring the Embedding Forces in Dimensionality Reduction**
 
