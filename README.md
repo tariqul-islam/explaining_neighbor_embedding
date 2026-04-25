@@ -85,12 +85,14 @@ $$
 
 If you find this paper or codebase useful, please consider citing our paper:
 
+
 ```bibtex
 @article{islam2026shape,
   title={The Shape of Attraction in UMAP: Exploring the Embedding Forces in Dimensionality Reduction},
-  author={Islam, Mohammad Tariqul and Fleischer, Jason W},
+  author={Islam, Mohammad Tariqul and <other authors>},
   journal={Transactions on Machine Learning Research},
   year={2026}
-}```
+}
+```
 
 ---
