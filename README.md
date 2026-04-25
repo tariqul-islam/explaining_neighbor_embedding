@@ -56,10 +56,7 @@ $$
 
 The paper shows that:
 
-1. Attractive updates contract distances only when
-   $$
-   -1 < \lambda f_a < 0.
-   $$
+1. Attractive updates contract distances only when $-1 < \lambda f_a < 0$.
 
 2. UMAP’s attraction shape can violate this condition at small distances, producing local expansion instead of contraction.
 
