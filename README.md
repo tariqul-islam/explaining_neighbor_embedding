@@ -33,7 +33,12 @@ $$
 y_i^{t+1} = y_i^t + \lambda f_r(\zeta^t)(y_i^t - y_j^t),
 $$
 
-where $(\zeta = |y_i - y_j|_2\), \(f_a)$ is the attraction shape, and $(f_r)$ is the repulsion shape.
+where $(\zeta = ||y_i - y_j||_2)$, $f_a$ is the attraction shape, and $(f_r)$ is the repulsion shape.
+
+
+<p align="center">
+  <img src="media/Fig_1_github.png" alt="Attraction and repulsion coefficeint" width="800">
+</p>
 
 For UMAP, these shapes are
 
@@ -51,7 +56,7 @@ $$
 
 The paper shows that:
 
-1. Attractive updates contract distances only when  
+1. Attractive updates contract distances only when
    $$
    -1 < \lambda f_a < 0.
    $$
