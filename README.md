@@ -15,7 +15,7 @@ UMAP and related neighbor-embedding methods are usually described as algorithms 
 - an **attraction shape**, which controls how positive/neighborhood edges move;
 - a **repulsion shape**, which controls how negative/non-neighbor edges move.
 
-This decomposition reveals that attraction in UMAP is more subtle than a simple “pull”: depending on the distance and learning rate, attractive updates can either contract or expand the distance between neighboring points. This helps explain why UMAP relies on learning-rate annealing and why random initialization can lead to inconsistent embeddings.
+This decomposition reveals that attraction in UMAP is more subtle than a simple “contraction”: depending on the distance and learning rate, attractive updates can either contract or expand the distance between neighboring points. This helps explain why UMAP relies on learning-rate annealing and why random initialization can lead to inconsistent embeddings.
 
 ---
 
@@ -37,8 +37,9 @@ where $\zeta = ||y_i - y_j||_2$ is the distance, $f_a$ is the attraction shape, 
 
 
 <p align="center">
-  <img src="media/Fig_1_github.png" alt="Attraction and repulsion coefficeint" width="800">
+  <img src="media/Fig1.png" alt="Attraction and repulsion coefficeint" width="800">
 </p>
+
 The value of $f_a$ and $f_r$ guides how the distances contract and expand.
  
 For UMAP, these shapes are
@@ -56,9 +57,16 @@ f_r^U(\zeta) =
 $$
 
 <p align="center">
-  <img src="media/Fig_1_Github_2.png" alt="Attraction and repulsion shapes of different algorithms" width="800">
+  <img src="media/Fig2.png" alt="Attraction and repulsion shapes of different algorithms" width="800">
 </p>
+
 (Left) Attraction, and (Right) repulsion shapes of different algorithms. $-1 < \lambda f_a < 0$ indicates contractions during attractive updates. $-0.5 < \lambda f_a < 0$ causes contractions without flips, whereas $\lambda f_a < -0.5$ causes flips.
+
+<p align="center">
+  <img src="media/Fig3.png" alt="Attraction and repulsion shapes of different algorithms" width="800">
+</p>
+
+The attraction shape behavior directly correlates to the internal chaotic behavior of updates. A shape that is below $-0.5$ for small distances cause a lot more flips uding update that the ones that are within $[-0.5,0]$. It also afffects how the distances contract during optimization.
 
 The paper shows that:
 
